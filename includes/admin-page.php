@@ -6,7 +6,7 @@ function wcme_options_page() {
 
 	ob_start(); ?>
 	<div class="wrap">
-		<h2>WooCommerce Multiple Recipients for E-Mail</h2>
+		<h2>WC Multiple Recipients for E-Mail</h2>
 		
 		<form method="post" action="options.php">
 		
@@ -103,7 +103,7 @@ function wcme_options_page() {
 
 
 function wcme_add_options_link() {
-	add_options_page('WooCommerce Multiple Recipients for Email', 'WC Multiple Email Recipients', 'manage_options', 'wcme-options', 'wcme_options_page');
+	add_options_page('WC Multiple Recipients for Email', 'WC Multiple Email Recipients', 'manage_options', 'wcme-options', 'wcme_options_page');
 }
 add_action('admin_menu', 'wcme_add_options_link');
 
