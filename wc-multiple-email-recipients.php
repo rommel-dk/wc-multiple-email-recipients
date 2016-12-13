@@ -14,7 +14,6 @@ Version: 1.0
 ******************************/
 
 // retrieve our plugin settings from the options table
-// testing git
 $wcme_options = get_option('wcme_settings');
 
 /******************************

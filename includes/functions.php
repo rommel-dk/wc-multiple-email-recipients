@@ -1,6 +1,6 @@
 <?php
 
-/*our functions for changing the Free! price string*/
+/*our functions for controlling the mail sending*/
 
 //Check if WooCommerce is active
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
