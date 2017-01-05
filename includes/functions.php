@@ -54,6 +54,40 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 			//break;
 		
 	}
+	
+	if ($object == 'booking_cancelled' && $wcme_options['enable_booking_cancelled'] == true) {
+        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+			//break;
+		
+	}
+	
+	if ($object == 'booking_confirmed' && $wcme_options['enable_booking_confirmed'] == true) {
+        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+			//break;
+		
+	}
+	
+	if ($object == 'booking_notification' && $wcme_options['enable_booking_notification'] == true) {
+        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+			//break;
+		
+	}
+	
+	
+	if ($object == 'booking_reminder' && $wcme_options['enable_booking_reminder'] == true) {
+        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+			//break;
+		
+	}
+	
+	if ($object == 'new_booking' && $wcme_options['enable_new_booking'] == true) {
+        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+			//break;
+		
+	}
+	
+	
+	
  
 	return $headers;
 }
