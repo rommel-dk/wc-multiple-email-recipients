@@ -87,40 +87,41 @@ function wcme_options_page() {
 			<!-- Start WooCommerce Bookings Mails -->
 			<p> 
 				
-				<input name="wcme_settings[booking_cancelled]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[booking_cancelled]" value="1"<?php checked( 1 == $wcme_options['booking_cancelled'] ); ?> />
-				<label class="description" for="wcme_settings[booking_cancelled]"><?php _e('WooCommerce Bookings Cancelled Mail', 'wcme_domain'); ?></label>				
+				<input name="wcme_settings[enable_booking_cancelled]" value="0" type="hidden">
+				<input type="checkbox" name="wcme_settings[enable_booking_cancelled]" value="1"<?php checked( isset ($wcme_options['enable_booking_cancelled']) ); ?> />
+				<label class="description" for="wcme_settings[enable_booking_cancelled]"><?php _e('WooCommerce Bookings Cancelled Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
-				
-				<input name="wcme_settings[booking_confirmed]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[booking_confirmed]" value="1"<?php checked( 1 == $wcme_options['booking_confirmed'] ); ?> />
-				<label class="description" for="wcme_settings[booking_confirmed]"><?php _e('WooCommerce Bookings Confirmed Mail', 'wcme_domain'); ?></label>				
-			</p>
 			
-			
-			<p> 
-				
-				<input name="wcme_settings[booking_notification]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[booking_notification]" value="1"<?php checked( 1 == $wcme_options['booking_notification'] ); ?> />
-				<label class="description" for="wcme_settings[booking_notification]"><?php _e('WooCommerce Bookings Manual Notification Mail', 'wcme_domain'); ?></label>				
+				<input name="wcme_settings[enable_booking_confirmed]" value="0" type="hidden">
+				<input type="checkbox" name="wcme_settings[enable_booking_confirmed]" value="1"<?php checked( isset( $wcme_options['enable_booking_confirmed'] ) ); 
+					//checked( 1 == $wcme_options['enable_booking_confirmed'] ); ?> />
+				<label class="description" for="wcme_settings[enable_booking_confirmed]"><?php _e('WooCommerce Bookings Confirmed Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			
 			<p> 
 				
-				<input name="wcme_settings[booking_reminder]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[booking_reminder]" value="1"<?php checked( 1 == $wcme_options['booking_reminder'] ); ?> />
-				<label class="description" for="wcme_settings[booking_reminder]"><?php _e('WooCommerce Bookings Reminder Mail', 'wcme_domain'); ?></label>				
+				<input name="wcme_settings[enable_booking_notification]" value="0" type="hidden">
+				<input type="checkbox" name="wcme_settings[enable_booking_notification]" value="1"<?php checked( isset( $wcme_options['enable_booking_notification'] )); ?> />
+				<label class="description" for="wcme_settings[enable_booking_notification]"><?php _e('WooCommerce Bookings Manual Notification Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			
 			<p> 
 				
-				<input name="wcme_settings[new_booking]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[new_booking]" value="1"<?php checked( 1 == $wcme_options['new_booking'] ); ?> />
-				<label class="description" for="wcme_settings[new_booking]"><?php _e('WooCommerce Bookings New Booking Mail', 'wcme_domain'); ?></label>				
+				<input name="wcme_settings[enable_booking_reminder]" value="0" type="hidden">
+				<input type="checkbox" name="wcme_settings[enable_booking_reminder]" value="1"<?php checked( isset( $wcme_options['enable_booking_reminder'] )); ?> />
+				<label class="description" for="wcme_settings[enable_booking_reminder]"><?php _e('WooCommerce Bookings Reminder Mail', 'wcme_domain'); ?></label>				
+			</p>
+			
+			
+			<p> 
+				
+				<input name="wcme_settings[enable_new_booking]" value="0" type="hidden">
+				<input type="checkbox" name="wcme_settings[enable_new_booking]" value="1"<?php checked( isset ( $wcme_options['enable_new_booking'] )); ?> />
+				<label class="description" for="wcme_settings[enable_new_booking]"><?php _e('WooCommerce Bookings New Booking Mail', 'wcme_domain'); ?></label>				
 			</p>
 
 

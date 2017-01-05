@@ -30,7 +30,6 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 		
 	}
 
-
 	if ($object == 'customer_processing_order'  && $wcme_options['enable_processing'] == true) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
@@ -55,32 +54,32 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 		
 	}
 	
-	if ($object == 'booking_cancelled' && $wcme_options['enable_booking_cancelled'] == true) {
+	if ($object == 'booking_cancelled' && isset ($wcme_options['enable_booking_cancelled'])) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'booking_confirmed' && $wcme_options['enable_booking_confirmed'] == true) {
+	if ($object == 'booking_confirmed' && isset ($wcme_options['enable_booking_confirmed'])) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'booking_notification' && $wcme_options['enable_booking_notification'] == true) {
+	if ($object == 'booking_notification' && isset ($wcme_options['enable_booking_notification'])) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
 	
-	if ($object == 'booking_reminder' && $wcme_options['enable_booking_reminder'] == true) {
+	if ($object == 'booking_reminder' && isset ($wcme_options['enable_booking_reminder'] == true)) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'new_booking' && $wcme_options['enable_new_booking'] == true) {
+	if ($object == 'new_booking' && isset ($wcme_options['enable_new_booking'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
