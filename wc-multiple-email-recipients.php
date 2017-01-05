@@ -5,7 +5,7 @@ Plugin URI: http://conschneider.de/plugin-woocommerce-multiple-email-recipients/
 Description: Allows for multiple recipients for WooCommerce E-Mails
 Author: Con Schneider
 Author URI: http://conschneider.de/
-Version: 1.0
+Version: 1.1
 */
 
 
