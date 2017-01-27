@@ -8,27 +8,39 @@ Author URI: http://conschneider.de/
 Version: 1.1
 */
 
+//first oop
+// then WooCommerce Subscriptions
+// then cpt
 
-/******************************
-* global variables
-******************************/
+if(!class_exists('wcme_MultipleEmail'))
+{
+	class wcme_MultipleEmail 
+	{
+		public function __construct()
+		{	
+			public $wcme_options = get_option('wcme_settings');
+			$plugin = plugin_basename(__FILE__);
+			
+			add_filter("plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ));
+			
+			require_once(sprintf("%s/includes/admin/admin-settings.php", dirname(__FILE__)));
+            $settings = new CustomPlugin_Settings(plugin_basename(__FILE__));
+            
+            include('includes/functions.php'); // display functions
+			include('includes/admin-page.php');
+            
+            
+		}
+	
+		function plugin_settings_link($links)
+		{
+			$settings_link = '<a href="options-general.php?page=wp_plugin_template">Settings</a>';
+			array_unshift($links, $settings_link);
+			return $links;
+		}
+	
+	}
 
-// retrieve our plugin settings from the options table
-$wcme_options = get_option('wcme_settings');
-
-/******************************
-* includes
-******************************/
-
-include('includes/functions.php'); // display functions
-include('includes/admin-page.php'); // the plugin options page HTML and save functions
-
-/******************************
-* useful settings link
-******************************/
-add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wcme_plugin_settings_link' );
-
-function wcme_plugin_settings_link( $links ) {
-   $links[] = '<a href="'. esc_url( get_admin_url(null, 'options-general.php?page=wcme-options') ) .'">Settings</a>';
-   return $links;
 }
+
+
