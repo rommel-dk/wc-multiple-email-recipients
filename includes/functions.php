@@ -73,7 +73,7 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 	}
 	
 	
-	if ($object == 'booking_reminder' && isset ($wcme_options['enable_booking_reminder'] == true)) {
+	if ($object == 'booking_reminder' && isset ($wcme_options['enable_booking_reminder'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
@@ -85,8 +85,23 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 		
 	}
 	
+	if ($object == 'suspended_subscription') {
+        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+			//break;
+		
+	}
 	
-	
+	/*cancelled_subscription
+	customer_completed_renewal_order
+	customer_completed_switch_order
+	customer_payment_retry
+	customer_processing_renewal_order
+	customer_renewal_invoice
+	expired_subscription
+	new_renewal_order
+	new_switch_order
+	suspended_subscription
+	payment_retry*/
  
 	return $headers;
 }
