@@ -1,4 +1,17 @@
 <?php
+	
+	
+<div class="wrap">
+    <h2>WP Plugin Template</h2>
+    <form method="post" action="options.php"> 
+        <?php @settings_fields('wp_plugin_template-group'); ?>
+        <?php @do_settings_fields('wp_plugin_template-group'); ?>
+
+        <?php do_settings_sections('wp_plugin_template'); ?>
+
+        <?php @submit_button(); ?>
+    </form>
+</div>
 
 function wcme_options_page() {
 
@@ -139,16 +152,3 @@ function wcme_options_page() {
 }
 
 
-
-
-
-function wcme_add_options_link() {
-	add_options_page('WC Multiple Recipients for Email', 'WC Multiple Email Recipients', 'manage_options', 'wcme-options', 'wcme_options_page');
-}
-add_action('admin_menu', 'wcme_add_options_link');
-
-function wcme_register_settings() {
-	// creates our settings in the options table
-	register_setting('wcme_settings_group', 'wcme_settings');
-}
-add_action('admin_init', 'wcme_register_settings');
