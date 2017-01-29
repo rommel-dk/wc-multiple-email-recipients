@@ -1,9 +1,13 @@
 # WC Multiple Email Recipients
 Allows for multiple recipients for WooCommerce E-Mails
 
-WooCommerce emails can only have one email recipient. Sometimes you need more then that. This plugin allows you to set up to five additional email addresses that can be used as additional email recipients for WooCommerce notification emails. You can select which email you want to have multiple recipients via the settings page.
+WooCommerce notification emails only get sent to the customer and admin email. Sometimes you need more than that. This plugin allows you to set up to five additional email addresses that can be used as additional email recipients for WooCommerce notification emails. You can select which email you want to have multiple recipients via the settings. 
+
+This plugin support WooCommerce, WooCommerce Bookings and WooCommerce Subscriptions. 
+
+The duplicated mails sent by this plugin will not show up in an email logger as they are sent using "BCC".
 
 
-![](http://conschneider.de/wp-content/uploads/2016/03/Screen-Shot-2016-03-16-at-21.58.57-768x900.png)
+![](https://ps.w.org/wc-multiple-email-recipients/assets/screenshot-1.png?rev=1584622)
 
 *Plugin options page*
