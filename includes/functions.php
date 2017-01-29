@@ -90,44 +90,44 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 	
 	// WooCommerce Subscriptions 
 	
-	if ($object == 'customer_completed_renewal_order' && isset ($wcme_options['enable_new_booking'] )) {
+	if ($object == 'customer_completed_renewal_order' && isset ($wcme_options['enable_customer_completed_renewal_order'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'customer_completed_switch_order' && isset ($wcme_options['enable_new_booking'] )) {
+	if ($object == 'customer_completed_switch_order' && isset ($wcme_options['enable_customer_completed_switch_order'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'customer_payment_retry' && isset ($wcme_options['enable_new_booking'] )) {
+	if ($object == 'customer_payment_retry' && isset ($wcme_options['enable_customer_payment_retry'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'customer_processing_renewal_order' && isset ($wcme_options['enable_new_booking'] )) {
+	if ($object == 'customer_processing_renewal_order' && isset ($wcme_options['customer_processing_renewal_order'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'customer_renewal_invoice' && isset ($wcme_options['enable_new_booking'] )) {
+	if ($object == 'customer_renewal_invoice' && isset ($wcme_options['enable_customer_renewal_invoice'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'expired_subscription' && isset ($wcme_options['enable_new_booking'] )) {
+	if ($object == 'expired_subscription' && isset ($wcme_options['expired_subscription'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
 	
-	if ($object == 'new_renewal_order' && isset ($wcme_options['enable_new_booking'] )) {
+	if ($object == 'new_renewal_order' && isset ($wcme_options['enable_new_renewal_order'] )) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
