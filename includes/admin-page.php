@@ -89,14 +89,14 @@ function wcme_options_page() {
 			<p> 
 				
 				<input name="wcme_settings[enable_booking_cancelled]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_booking_cancelled]" value="1"<?php checked( isset ($wcme_options['enable_booking_cancelled']) ); ?> />
+				<input type="checkbox" name="wcme_settings[enable_booking_cancelled]" value="1"<?php checked( 1 ==  ($wcme_options['enable_booking_cancelled']) ); ?> />
 				<label class="description" for="wcme_settings[enable_booking_cancelled]"><?php _e('WooCommerce Bookings Cancelled Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 			
 				<input name="wcme_settings[enable_booking_confirmed]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_booking_confirmed]" value="1"<?php checked( isset( $wcme_options['enable_booking_confirmed'] ) ); 
+				<input type="checkbox" name="wcme_settings[enable_booking_confirmed]" value="1"<?php checked(  1 == ( $wcme_options['enable_booking_confirmed'] ) ); 
 					//checked( 1 == $wcme_options['enable_booking_confirmed'] ); ?> />
 				<label class="description" for="wcme_settings[enable_booking_confirmed]"><?php _e('WooCommerce Bookings Confirmed Mail', 'wcme_domain'); ?></label>				
 			</p>
@@ -105,7 +105,7 @@ function wcme_options_page() {
 			<p> 
 				
 				<input name="wcme_settings[enable_booking_notification]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_booking_notification]" value="1"<?php checked( isset( $wcme_options['enable_booking_notification'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_booking_notification]" value="1"<?php checked(  1 == ( $wcme_options['enable_booking_notification'] )); ?> />
 				<label class="description" for="wcme_settings[enable_booking_notification]"><?php _e('WooCommerce Bookings Manual Notification Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
@@ -113,7 +113,7 @@ function wcme_options_page() {
 			<p> 
 				
 				<input name="wcme_settings[enable_booking_reminder]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_booking_reminder]" value="1"<?php checked( isset( $wcme_options['enable_booking_reminder'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_booking_reminder]" value="1"<?php checked(  1 == ( $wcme_options['enable_booking_reminder'] )); ?> />
 				<label class="description" for="wcme_settings[enable_booking_reminder]"><?php _e('WooCommerce Bookings Reminder Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
@@ -121,7 +121,7 @@ function wcme_options_page() {
 			<p> 
 				
 				<input name="wcme_settings[enable_new_booking]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_new_booking]" value="1"<?php checked( isset ( $wcme_options['enable_new_booking'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_new_booking]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_new_booking'] )); ?> />
 				<label class="description" for="wcme_settings[enable_new_booking]"><?php _e('WooCommerce Bookings New Booking Mail', 'wcme_domain'); ?></label>				
 			</p>
 			<!-- Start WooCommerce Subscriptions -->
@@ -129,35 +129,35 @@ function wcme_options_page() {
 			<p> 
 				
 				<input name="wcme_settings[enable_customer_completed_renewal_order]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_customer_completed_renewal_order]" value="1"<?php checked( isset ( $wcme_options['enable_customer_completed_renewal_order'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_customer_completed_renewal_order]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_customer_completed_renewal_order'] )); ?> />
 				<label class="description" for="wcme_settings[enable_customer_completed_renewal_order]"><?php _e('WooCommerce Subscriptions Completed Renewal Order Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 				
 				<input name="wcme_settings[enable_customer_completed_switch_order]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_customer_completed_switch_order]" value="1"<?php checked( isset ( $wcme_options['enable_customer_completed_switch_order'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_customer_completed_switch_order]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_customer_completed_switch_order'] )); ?> />
 				<label class="description" for="wcme_settings[enable_customer_completed_switch_order]"><?php _e('WooCommerce Subscriptions Completed Switch Order Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 				
 				<input name="wcme_settings[enable_customer_payment_retry]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_customer_payment_retry]" value="1"<?php checked( isset ( $wcme_options['enable_customer_payment_retry'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_customer_payment_retry]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_customer_payment_retry'] )); ?> />
 				<label class="description" for="wcme_settings[enable_customer_payment_retry]"><?php _e('WooCommerce Subscriptions Customer Payment Retry Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 				
 				<input name="wcme_settings[customer_processing_renewal_order]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[customer_processing_renewal_order]" value="1"<?php checked( isset ( $wcme_options['customer_processing_renewal_order'] )); ?> />
+				<input type="checkbox" name="wcme_settings[customer_processing_renewal_order]" value="1"<?php checked(  1 ==  ( $wcme_options['customer_processing_renewal_order'] )); ?> />
 				<label class="description" for="wcme_settings[customer_processing_renewal_order]"><?php _e('WooCommerce Subscriptions Customer Processing Renewal Order Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 				
 				<input name="wcme_settings[enable_customer_renewal_invoice]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_customer_renewal_invoice]" value="1"<?php checked( isset ( $wcme_options['enable_customer_renewal_invoice'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_customer_renewal_invoice]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_customer_renewal_invoice'] )); ?> />
 				<label class="description" for="wcme_settings[enable_customer_renewal_invoice]"><?php _e('WooCommerce Subscriptions Customer Renewal Invoice Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
@@ -165,35 +165,35 @@ function wcme_options_page() {
 			<p> 
 				
 				<input name="wcme_settings[expired_subscription]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[expired_subscription]" value="1"<?php checked( isset ( $wcme_options['expired_subscription'] )); ?> />
+				<input type="checkbox" name="wcme_settings[expired_subscription]" value="1"<?php checked(  1 ==  ( $wcme_options['expired_subscription'] )); ?> />
 				<label class="description" for="wcme_settings[expired_subscription]"><?php _e('WooCommerce Subscriptions Expired Subscription Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 				
 				<input name="wcme_settings[enable_new_renewal_order]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_new_renewal_order]" value="1"<?php checked( isset ( $wcme_options['enable_new_renewal_order'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_new_renewal_order]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_new_renewal_order'] )); ?> />
 				<label class="description" for="wcme_settings[enable_new_renewal_order]"><?php _e('WooCommerce Subscriptions New Renewal Order Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 				
 				<input name="wcme_settings[enable_new_switch_order]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_new_switch_order]" value="1"<?php checked( isset ( $wcme_options['enable_new_switch_order'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_new_switch_order]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_new_switch_order'] )); ?> />
 				<label class="description" for="wcme_settings[enable_new_switch_order]"><?php _e('WooCommerce Subscriptions New Switch Order Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 				
 				<input name="wcme_settings[enable_suspended_subscription]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_suspended_subscription]" value="1"<?php checked( isset ( $wcme_options['enable_suspended_subscription'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_suspended_subscription]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_suspended_subscription'] )); ?> />
 				<label class="description" for="wcme_settings[enable_suspended_subscription]"><?php _e('WooCommerce Subscriptions Suspended Subscription Mail', 'wcme_domain'); ?></label>				
 			</p>
 			
 			<p> 
 				
 				<input name="wcme_settings[enable_payment_retry]" value="0" type="hidden">
-				<input type="checkbox" name="wcme_settings[enable_payment_retry]" value="1"<?php checked( isset ( $wcme_options['enable_payment_retry'] )); ?> />
+				<input type="checkbox" name="wcme_settings[enable_payment_retry]" value="1"<?php checked(  1 ==  ( $wcme_options['enable_payment_retry'] )); ?> />
 				<label class="description" for="wcme_settings[enable_payment_retry]"><?php _e('WooCommerce Subscriptions Payment Retry Mail', 'wcme_domain'); ?></label>				
 			</p>
 		

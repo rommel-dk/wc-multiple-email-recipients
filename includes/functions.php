@@ -9,12 +9,11 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 
 	// Hook me in!
 	add_filter( 'woocommerce_email_headers', 'wcme_multiple_recipients', 10, 2);
-		
+
 
 	function wcme_multiple_recipients( $headers, $object ) {
 	//get our options
 	$wcme_options = get_option('wcme_settings');
-	
 	// replace the emails below to your desire email
 	$emails = array( $wcme_options['email_1'], $wcme_options['email_2'], $wcme_options['email_3'], $wcme_options['email_4'], $wcme_options['email_5'] );
 		
