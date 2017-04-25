@@ -3,8 +3,8 @@ Contributors: conschneider
 Donate link: http://conschneider.de
 Tags: WooCommerce,emails,notification
 Requires at least: 4.0
-Tested up to: 4.7
-Stable tag: 1.2.1
+Tested up to: 4.7.4
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,17 +72,17 @@ The duplicated mails sent by this plugin are sent using "BCC". Thus they will no
 == Changelog ==
 
 = 1.2.2 =
-* Fix: Ensure WooCommerce 3 compatibility by expanding methods
+* Fix: Ensure WooCommerce 3 compatibility by expanding methods.
 
 = 1.2.1 =
-* Fix: Settings did not correctly save for WooCommerce Subscriptions and WooCommerce Bookings
+* Fix: Settings did not correctly save for WooCommerce Subscriptions and WooCommerce Bookings.
 
 = 1.2 =
-* added support for WooCommerce Subscriptions
+* added support for WooCommerce Subscriptions.
 
 = 1.1 =
-* added support for WooCommerce Bookings
+* added support for WooCommerce Bookings.
 
 = 1.0 =
-* Initial version
+* Initial version.
  
