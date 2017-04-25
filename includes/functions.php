@@ -10,8 +10,7 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 	// Hook me in!
 	add_filter( 'woocommerce_email_headers', 'wcme_multiple_recipients', 10, 2);
 
-
-	function wcme_multiple_recipients( $headers, $object ) {
+	function wcme_multiple_recipients( $headers = '', $id = '', $order ) {
 	//get our options
 	$wcme_options = get_option('wcme_settings');
 	// replace the emails below to your desire email
@@ -19,68 +18,68 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 		
 		
 	// WooCommerce core	
-    if ($object == 'new_order'  && $wcme_options['enable_new']) {
+    if ($id == 'new_order'  && $wcme_options['enable_new']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 
-	if ($object == 'cancelled_order'  && $wcme_options['enable_cancelled']) {
+	if ($id == 'cancelled_order'  && $wcme_options['enable_cancelled']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 
-	if ($object == 'customer_processing_order'  && $wcme_options['enable_processing']) {
+	if ($id == 'customer_processing_order'  && $wcme_options['enable_processing']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 
-	if ($object == 'customer_completed_order'  && $wcme_options['enable_completed']) {
+	if ($id == 'customer_completed_order'  && $wcme_options['enable_completed']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 
-	if ($object == 'customer_invoice'  && $wcme_options['enable_invoice']) {
+	if ($id == 'customer_invoice'  && $wcme_options['enable_invoice']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 
-	if ($object == 'customer_refunded_order'  && $wcme_options['enable_refunded']) {
+	if ($id == 'customer_refunded_order'  && $wcme_options['enable_refunded']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
 	// WooCommerce Booking
-	if ($object == 'booking_cancelled' && $wcme_options['enable_booking_cancelled']) {
+	if ($id == 'booking_cancelled' && $wcme_options['enable_booking_cancelled']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 	}
 	
-	if ($object == 'booking_confirmed' && $wcme_options['enable_booking_confirmed']) {
-        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
-			//break;
-		
-	}
-	
-	if ($object == 'booking_notification' && $wcme_options['enable_booking_notification']) {
+	if ($id == 'booking_confirmed' && $wcme_options['enable_booking_confirmed']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	
-	if ($object == 'booking_reminder' && $wcme_options['enable_booking_reminder']) {
+	if ($id == 'booking_notification' && $wcme_options['enable_booking_notification']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'new_booking' &&  $wcme_options['enable_new_booking']) {
+	
+	if ($id == 'booking_reminder' && $wcme_options['enable_booking_reminder']) {
+        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+			//break;
+		
+	}
+	
+	if ($id == 'new_booking' &&  $wcme_options['enable_new_booking']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
@@ -88,63 +87,63 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 	
 	// WooCommerce Subscriptions 
 	
-	if ($object == 'customer_completed_renewal_order' && $wcme_options['enable_customer_completed_renewal_order'] ) {
+	if ($id == 'customer_completed_renewal_order' && $wcme_options['enable_customer_completed_renewal_order'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'customer_completed_switch_order' && $wcme_options['enable_customer_completed_switch_order'] ) {
+	if ($id == 'customer_completed_switch_order' && $wcme_options['enable_customer_completed_switch_order'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'customer_payment_retry' && $wcme_options['enable_customer_payment_retry'] ) {
+	if ($id == 'customer_payment_retry' && $wcme_options['enable_customer_payment_retry'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'customer_processing_renewal_order' && $wcme_options['customer_processing_renewal_order'] ) {
+	if ($id == 'customer_processing_renewal_order' && $wcme_options['customer_processing_renewal_order'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'customer_renewal_invoice' && $wcme_options['enable_customer_renewal_invoice'] ) {
+	if ($id == 'customer_renewal_invoice' && $wcme_options['enable_customer_renewal_invoice'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'expired_subscription' && $wcme_options['expired_subscription'] ) {
-        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
-			//break;
-		
-	}
-	
-	
-	if ($object == 'new_renewal_order' && $wcme_options['enable_new_renewal_order'] ) {
+	if ($id == 'expired_subscription' && $wcme_options['expired_subscription'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
 	
-	if ($object == 'new_switch_order' && $wcme_options['enable_new_switch_order'] ) {
+	if ($id == 'new_renewal_order' && $wcme_options['enable_new_renewal_order'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'suspended_subscription' && $wcme_options['enable_suspended_subscription'] ) {
+	
+	if ($id == 'new_switch_order' && $wcme_options['enable_new_switch_order'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
 	}
 	
-	if ($object == 'payment_retry' && $wcme_options['enable_payment_retry'] ) {
+	if ($id == 'suspended_subscription' && $wcme_options['enable_suspended_subscription'] ) {
+        $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+			//break;
+		
+	}
+	
+	if ($id == 'payment_retry' && $wcme_options['enable_payment_retry'] ) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
 			//break;
 		
