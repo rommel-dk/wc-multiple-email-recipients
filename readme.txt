@@ -1,10 +1,10 @@
 === Plugin Name ===
-Contributors: conschneider
+Contributors: conschneider, dinodesigns87
 Donate link: http://conschneider.de
 Tags: WooCommerce,emails,notification
 Requires at least: 4.0
 Tested up to: 4.7.4
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,9 @@ The duplicated mails sent by this plugin are sent using "BCC". Thus they will no
 1. Settings page
 
 == Changelog ==
+
+= 1.2.3 =
+* Fix: Added support to for On-Hold emails in WooCommerce. Shoutout to @dinodesigns87. Thanks!
 
 = 1.2.2 =
 * Fix: Ensure WooCommerce 3 compatibility by expanding methods.

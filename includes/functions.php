@@ -54,6 +54,11 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 		
 	}
 	
+	if ($object == 'customer_on_hold_order' && $wcme_options['enable_on_hold']) {
+	$headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";
+		//break;
+	}
+	
 	// WooCommerce Booking
 	if ($id == 'booking_cancelled' && $wcme_options['enable_booking_cancelled']) {
         $headers .= 'Bcc: ' . implode(',', $emails) . "\r\n";

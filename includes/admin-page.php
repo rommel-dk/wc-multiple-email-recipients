@@ -74,6 +74,11 @@ function wcme_options_page() {
 				<input type="checkbox" name="wcme_settings[enable_invoice]" value="1"<?php checked( 1 == $wcme_options['enable_invoice'] ); ?> />
 				<label class="description" for="wcme_settings[enable_invoice]"><?php _e('WooCommerce Order Invoice Mail', 'wcme_domain'); ?></label>				
 			</p>
+			
+			<input name="wcme_settings[enable_on_hold]" value="0" type="hidden">
+				<input type="checkbox" name="wcme_settings[enable_on_hold]" value="1"<?php checked( 1 == $wcme_options['enable_on_hold'] ); ?> />
+				<label class="description" for="wcme_settings[enable_on_hold]"><?php _e('WooCommerce On Hold Mail <i>(This email only gets triggered when the order gets set from pending or failed to on-hold)</i>', 'wcme_domain'); ?></label>				
+			</p>
 
 
 
