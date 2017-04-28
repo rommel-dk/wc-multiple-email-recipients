@@ -8,7 +8,6 @@ Author URI: http://conschneider.de/
 Version: 1.2.3
 */
 
-
 /******************************
 * global variables
 ******************************/
