@@ -11,7 +11,6 @@ if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 	add_filter( 'woocommerce_email_headers', 'wcme_multiple_recipients', 10, 2);
 
 	function wcme_multiple_recipients( $headers = '', $id = '') {
-	//function wcme_multiple_recipients( $headers = '', $id = '', $order ) {
 	
 	//get our options
 	$wcme_options = get_option('wcme_settings');
